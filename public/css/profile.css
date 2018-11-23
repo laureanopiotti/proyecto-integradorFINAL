@@ -1,0 +1,31 @@
+.container {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+
+.user-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.avatar {
+	width: 100px;
+	height: 100px;
+}
+
+
+.user-text {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.user-text p{
+	text-align: center;
+}
