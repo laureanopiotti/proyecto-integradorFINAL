@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6a1b14f47ad09305008925a514cbaa46
+class ComposerStaticInitd3193481d170efe398a5173d0a123a2c
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -382,7 +382,6 @@ class ComposerStaticInit6a1b14f47ad09305008925a514cbaa46
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Genre' => __DIR__ . '/../..' . '/app/Genre.php',
         'App\\Http\\Controllers\\AdminProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminProductController.php',
-        'App\\Http\\Controllers\\AdminUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminUserController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
@@ -3946,11 +3945,11 @@ class ComposerStaticInit6a1b14f47ad09305008925a514cbaa46
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6a1b14f47ad09305008925a514cbaa46::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6a1b14f47ad09305008925a514cbaa46::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6a1b14f47ad09305008925a514cbaa46::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6a1b14f47ad09305008925a514cbaa46::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6a1b14f47ad09305008925a514cbaa46::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd3193481d170efe398a5173d0a123a2c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd3193481d170efe398a5173d0a123a2c::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInitd3193481d170efe398a5173d0a123a2c::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd3193481d170efe398a5173d0a123a2c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd3193481d170efe398a5173d0a123a2c::$classMap;
 
         }, null, ClassLoader::class);
     }
