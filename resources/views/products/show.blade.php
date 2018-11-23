@@ -11,7 +11,6 @@
 @section('content')
 
 
-
   <body>
 	
 	<div class="container">
@@ -24,8 +23,8 @@
 						  <div class="tab-pane" id="pic-2"><img src="{{$product->imageLoc2}}" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="{{$product->imageLoc}}" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{$product->imageLoc2}}" /></a></li>
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img  class="asd" src="{{$product->imageLoc}}" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img class="asd" src="{{$product->imageLoc2}}" /></a></li>
 
 						</ul>
 						
@@ -45,13 +44,8 @@
                     <p class="product-description">{{$product->description}}</p>
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
-						<h5 class="sizes">sizes: 
-                            <span class="size" data-toggle="tooltip" title="small">s</span>
-							<span class="size" data-toggle="tooltip" title="medium">m</span>
-							<span class="size" data-toggle="tooltip" title="large">l</span>
-                            <span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-                    
-                            {{-- foreach size hacer un span de cda uno (falta tabla pivot) --}}
+						<h5 class="sizes">size: 
+						<span class="size" data-toggle="tooltip" title="small">{{$product->size_id}}</span>
 						</h5>
 						
 						<div class="action">
