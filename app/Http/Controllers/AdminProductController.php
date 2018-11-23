@@ -72,10 +72,12 @@ class AdminProductController extends Controller
         $path = $request->file('imageLoc');
         $path2 = $request->file('imageLoc2');
 
+        $extension = $request->file('imageLoc')->extension();
+        $extension2 = $request->file('imageLoc2')->extension();
 
         if (!is_null($path)) {
-            $path->storeAs('public/products', '1'.$request->user()->id);
-            $product->imageLoc = 'storage/products/1'.$request->user()->id;
+            $path->storeAs('public/products', '1'.$request->user()->id.'.'.$extension);
+            $product->imageLoc = 'storage/products/1'.$request->user()->id.'.'.$extension2;
         }
         if (!is_null($path2)) {
             $path2->storeAs('public/products', '2'.$request->user()->id);
@@ -151,10 +153,13 @@ class AdminProductController extends Controller
         $path = $request->file('imageLoc');
         $path2 = $request->file('imageLoc2');
 
+        $extension = $request->file('imageLoc')->extension();
+        $extension2 = $request->file('imageLoc2')->extension();
+
 
         if (!is_null($path)) {
-            $path->storeAs('public/products', '1'.$request->user()->id);
-            $product->imageLoc = 'storage/products/1'.$request->user()->id;
+            $path->storeAs('public/products', '1'.$request->user()->id.'.'.$extension);
+            $product->imageLoc = 'storage/products/1'.$request->user()->id.'.'.$extension2;
         }
         if (!is_null($path2)) {
             $path2->storeAs('public/products', '2'.$request->user()->id);
