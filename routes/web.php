@@ -11,6 +11,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Artisan::call("storage:link");
+exit;
 
 Route::get('/', 'PagesController@main')->name('main');
 Route::get('/faqs', 'PagesController@faqs')->name('faqs');
@@ -38,3 +40,4 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('/{provider}', 'Auth\LoginController@redirectToProvider');
     Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 });
+
