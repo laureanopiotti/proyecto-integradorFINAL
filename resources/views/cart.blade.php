@@ -41,7 +41,7 @@
                             @endphp
 
                                     <tr>
-                                    <td><img src="{{$product['image']}}" width="10%"/> </td>
+                                    <td><img src="{{asset($product['image'])}}" width="10%"/> </td>
                                     <td class="initialism">{{$product['name']}}</td>
                                     <td class="">{{$product['description']}}</td>
                                         <td >In stock</td>
