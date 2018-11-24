@@ -2,7 +2,7 @@
 @section('assets')
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="{{asset('css/product.css')}}">
-		<link rel="stylesheet" href="{{asset('css/reset.css')}}">
+<link rel="stylesheet" href="{{asset('css/reset.css')}}">
 
 
 @endsection
@@ -25,7 +25,7 @@
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="{{asset($product->imageLoc)}}" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)	}}" /></a></li>
 
 						</ul>
 						
