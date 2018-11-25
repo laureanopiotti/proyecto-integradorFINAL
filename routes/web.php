@@ -40,3 +40,6 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 });
 
+    // Route::resource('/update', 'Auth\UserUpdate')->middleware('auth');
+    Route::get('/update/edit/{id}', 'UserUpdate@edit')->middleware('auth')->name('edit');
+    Route::get('/update{id}', 'UserUpdate@update')->middleware('auth')->name('put');

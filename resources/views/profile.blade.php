@@ -18,8 +18,8 @@
 			
 			<section class="row">
 				<article class="col-sm-10">
-				<h1 class="">{{Auth::User()->name}}</h1>
-				<button type="button" class="btn btn-warning">Edit Profile</button> 
+				<h1 class="">{{Auth::User()->name . " " . Auth::User()->lname}}</h1>
+				<a  href="{{route('edit', Auth::User()->id)}}" class="btn btn-warning">Edit Profile</button> 
 				</article>
 				<section class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
 			</section>
@@ -33,23 +33,7 @@
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{Auth::User()->email}}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender}}</li>
 					</ul>
-				<article class="panel panel-default">
-					
-					<section class="panel-heading">Configuracion:
-
-						<div class="panel-body">
-							<a class="btn btn-success">Editar Contrasena</a>
-							<hr>
-							<a class="btn btn-warning">Cambiar Avatar</a>
-							<hr>
-							<a class="btn btn-secondary">Cambiar Email</a>
-							<hr>
-							<a class="btn btn-info">Cambiar Nombre y Apellido</a>
-							<hr>
-
-						</div>
-					</section>
-				</article>
+				
 					
 				</article>
 
@@ -91,8 +75,9 @@
 						<article class="panel-body"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nobis est necessitatibus ex, tenetur eius. Dolorum eos fuga qui dolorem. Quam, recusandae eum totam magnam beatae provident sit dolores eveniet.</article>
 						<br>
 						<button type="button" class="btn btn-primary">Lorem Ipsum
-
-				</section>				
+						
+				</section>
+				<br>				
 		</section>
 	</main>
 
