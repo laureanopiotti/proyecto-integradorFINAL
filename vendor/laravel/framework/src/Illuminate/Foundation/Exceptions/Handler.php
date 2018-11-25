@@ -220,12 +220,7 @@ class Handler implements ExceptionHandlerContract
                     ? response()->json(['message' => $exception->getMessage()], 401)
                     : redirect()->guest($exception->redirectTo() ?? route('login'));
     }
-    // protected function unauthenticated($request, AuthenticationException $exception)
-    // {
-    //     return $request->expectsJson()
-    //                 ? response()->json(['message' => $exception->getMessage()], 401)
-    //                 : redirect('/');
-    // }
+
     /**
      * Create a response object from the given validation exception.
      *

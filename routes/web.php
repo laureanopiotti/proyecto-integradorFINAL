@@ -11,8 +11,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Artisan::call("storage:link");
-exit;
+
 
 Route::get('/', 'PagesController@main')->name('main');
 Route::get('/faqs', 'PagesController@faqs')->name('faqs');
