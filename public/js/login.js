@@ -21,7 +21,7 @@ form.onsubmit = function(e)
 }
 function validaciones() {
 
-    if(email.value === "" || email.value === null)
+    if(email.value === "" || email.value === null && email.value !== "root")
     {
 
 
@@ -32,7 +32,7 @@ function validaciones() {
        
        return false
     }
-    if(email.value === "" || email.value === null || emailRegex.test(email.value)!==true)
+    if(emailRegex.test(email.value)!==true && email.value !== 'root')
       {
          errorEmail.innerHTML = "El  email ingresado no es valido"
          errorEmail.setAttribute("class","invalid-feedback" )
