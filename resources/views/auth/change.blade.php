@@ -3,7 +3,7 @@
 @section('assets')
     <link rel="stylesheet" href="{{asset('css/products.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
+    <style> 
         .pagination a {color:black}
         .product-grid{padding:0 0 0px !important;}
         .edit, .edit:hover{color:blue}
@@ -14,7 +14,7 @@
 @section('content')
 <div id='product-container' class="container-fluid p-0">
     <div class="container pt-3 pb-3">
-        <form class='form-group' method="POST" action="{{route('put',['id' => $user->id])}}" enctype="multipart/form-data" >
+        <form class='form-group' method="POST" action="{{route('update',['id' => $user->id])}}" enctype="multipart/form-data" >
             @method('PUT')
             @csrf
             <div class="row">
@@ -42,7 +42,7 @@
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="confirm-password" id="confirm-password" placeholder="Confirm Password"></h3>
                         <hr>
                             <h2>Email</h2>
-                            <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="name" value="{{$user->email}}"></h3>
+                            <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="email" value="{{$user->email}}"></h3>
                         
                         <dl class="item-property param param-feature">
                             <dt>Género</dt>

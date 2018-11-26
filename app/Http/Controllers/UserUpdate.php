@@ -18,21 +18,21 @@ class UserUpdate extends Controller
     {
         
         $this->validate($request, [
-            "password" => '',
-            "npassword" => '',
-            "confirm-password" => '',
+            "password" => 'nullable|alphaNum',
+            "npassword" => 'nullable|alphaNum|min:8',
+            "confirm-password" => 'nullable|alphaNum|min:8',
             "genre" => 'required',
             "name" => 'required',
         ]);
-
+            
         $user = User::find($id);
-if($request->input("npassword") == null || $request->input("npassword") == "" ){
-    return true;
+
+
+if(\Hash::check($request->input("password"), $user->password)){
+    $user->password = \Hash::make($request->input("npassword"));
 }
-elseif(length($request->input("npassword")) > 7 && $request->input("npassword") == $request->input("confirm-password")){
-    $user->password = Hash::make($request->input("npassword"));
-    return true;
-}
+
+
 
         $user->name = $request->input("name");
         $user->genre = $request->input("genre");
@@ -42,7 +42,7 @@ elseif(length($request->input("npassword")) > 7 && $request->input("npassword") 
 
 
 
-        if (!is_null($path)) {
+        if ($path) {
             $path->storeAs('public/products', 'avatar'.$request->user()->id);
             $user->avatar = 'storage/products/avatar'.$request->user()->id;
         }
@@ -52,6 +52,6 @@ elseif(length($request->input("npassword")) > 7 && $request->input("npassword") 
         $user->save();
 
 
-        return view('profile');
+        return view('profile') ;
     }
 }
