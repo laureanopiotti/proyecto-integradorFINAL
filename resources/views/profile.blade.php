@@ -19,7 +19,7 @@
 			<section class="row">
 				<article class="col-sm-10">
 				<h1 class="">{{Auth::User()->name . " " . Auth::User()->lname}}</h1>
-				<a  href="{{route('edit', Auth::User()->id)}}" class="btn btn-warning">Edit Profile</button> 
+				<a  href="{{route('edit', Auth::User()->id)}}" class="btn btn-warning">Edit Profile</a> 
 				</article>
 				<section class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
 			</section>

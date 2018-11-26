@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Rules\PasswordK;
+
 
 class UserUpdate extends Controller
 {
@@ -16,26 +18,36 @@ class UserUpdate extends Controller
 
     public function update(Request $request, $id)
     {
+        $user = User::find($id);
+
         
         $this->validate($request, [
-            "password" => 'nullable|alphaNum',
-            "npassword" => 'nullable|alphaNum|min:8',
-            "confirm-password" => 'nullable|alphaNum|min:8',
+            "password" => 'nullable|alpha_num|required_unless:npassword, ""', function ($attribute, $value, $fail) {
+                if (!\Hash::check($value, $user->password)) {
+                    $fail($attribute.' is invalid.');
+                }
+            },
+            "npassword" => 'nullable|alpha_num|min:8',
+            "confirm-password" => 'nullable|alpha_num|min:8|same:npassword',
             "genre" => 'required',
             "name" => 'required',
+            "email" => 'required|email'
         ]);
             
-        $user = User::find($id);
 
 
 if(\Hash::check($request->input("password"), $user->password)){
     $user->password = \Hash::make($request->input("npassword"));
+}
+else{
+    
 }
 
 
 
         $user->name = $request->input("name");
         $user->genre = $request->input("genre");
+        $user->email = $request->input("email");
 
 
         $path = $request->file('avatar');

@@ -33,16 +33,38 @@
                     <article class="card-body p-2 pl-4">
                         <h2>Name</h2>
                         <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="name" value="{{$user->name}}"></h3>
+                        @if ($errors->has('name'))
+                        <strong>{{ $errors->first('name') }}</strong>
+        
+                @endif
                         <hr>
                         <h2>Password</h2>
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="password" id="password" placeholder="Password"></h3>
+                        @if(isset($passwordk))
+                        {{$passwordk}}
+                        @endif
+                        @if ($errors->has('password'))
+                        <strong>{{ $errors->first('password') }}</strong>
+        
+                @endif
                         <hr>
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="npassword" id="npassword" placeholder="New Password"></h3>
-                      
+                        @if ($errors->has('npassword'))
+                        <strong>{{ $errors->first('npassword') }}</strong>
+        
+                @endif
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="confirm-password" id="confirm-password" placeholder="Confirm Password"></h3>
+                        @if ($errors->has('confirm-password'))
+                        <strong>{{ $errors->first('confirm-password') }}</strong>
+        
+                @endif
                         <hr>
                             <h2>Email</h2>
-                            <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="email" value="{{$user->email}}"></h3>
+                            <h3 class="title mb-3"><input type="text" style="width: 70%;" name="email" id="email" value="{{$user->email}}"></h3>
+                            @if ($errors->has('email'))
+                            <strong>{{ $errors->first('email') }}</strong>
+            
+                    @endif
                         
                         <dl class="item-property param param-feature">
                             <dt>Género</dt>
