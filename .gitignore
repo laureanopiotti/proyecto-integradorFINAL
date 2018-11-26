@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 .env
+=======
+>>>>>>> 8800c43993498c617687e02a2d7d740294f8deeb
 /node_modules
 /public/hot
 /public/storage
@@ -11,4 +14,8 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+<<<<<<< HEAD
+=======
+.env
+>>>>>>> 8800c43993498c617687e02a2d7d740294f8deeb
 .phpunit.result.cache

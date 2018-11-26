@@ -68,14 +68,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+<<<<<<< HEAD
         $path = "storage/" .  $data['avatar']->store('app/avatars');
+=======
+        $path = $data['avatar'];
+
+
+        if (!is_null($path)) {
+            $filename = $path->store('public/avatars');
+            $dbFilename = explode('/',$filename);
+            $filename = 'storage/avatars/'.$dbFilename[2];
+        }
+
+        // $filename = $path->getClientOriginalName();
+        // $path = 'storage/products/'.$filename; 
+>>>>>>> 8800c43993498c617687e02a2d7d740294f8deeb
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'genre' => $data['genre'],
-            'avatar' => $path
+            'avatar' => $filename
         ]);
     }
  
