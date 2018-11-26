@@ -1,12 +1,12 @@
-window.onload  = function()
-{
 
 
-    var formulario = document.querySelector("#form")
+
+    var formulario = document.getElementById("form02")
     var email = document.getElementById("userEmail")
     var password = document.getElementById("inputPassword6")
     var errorPassword = document.getElementById("errorPassword")
     var errorEmail = document.getElementById("errorEmail")
+    var emailRegex = (/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)
 
 
 formulario.onsubmit = function(e)
@@ -27,7 +27,7 @@ function validaciones() {
 
        errorEmail.innerHTML = "Debe ingresar un email"
        errorEmail.setAttribute("class","invalid-feedback" )
-       email.setAttribute("class", "form-control is-invalid")
+       email.setAttribute("class", "form-control mx-sm-3 col-12 col-lg-6 is-invalid")
        email.addEventListener("change", changeEmail)
 
        return false
@@ -36,7 +36,7 @@ function validaciones() {
       {
          errorEmail.innerHTML = "El  email ingresado no es valido"
          errorEmail.setAttribute("class","invalid-feedback" )
-         email.setAttribute("class", "form-control is-invalid")
+         email.setAttribute("class", "is-invalid form-control mx-sm-3 col-12 col-lg-6")
          email.addEventListener("change", changeEmail)
          return false
       }
@@ -50,8 +50,8 @@ function validaciones() {
                      if(password.value === "" || password.value === null)
                      {    
                         errorPassword.innerHTML = "Debe ingresar un contraseña"
-                        errorPass.setAttribute("class","invalid-feedback" )
-                        password.setAttribute("class", "form-control is-invalid")
+                        errorPassword.setAttribute("class","invalid-feedback" )
+                        password.setAttribute("class", "is-invalid form-control mx-sm-3 col-12 col-lg-6")
                         password.addEventListener('change', changePassword)
                         return false;
         
@@ -64,5 +64,3 @@ function validaciones() {
                         }
 
                     }
-                
-                }
