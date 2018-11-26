@@ -7,7 +7,7 @@
 	{{-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> --}}
 		<link rel="stylesheet" href="css/profile.css">
 		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/header.css"> 
 	@endsection
 
 	@section('content')
@@ -21,7 +21,7 @@
 				<h1 class="">{{Auth::User()->name . " " . Auth::User()->lname}}</h1>
 				<a  href="{{route('edit', Auth::User()->id)}}" class="btn btn-warning">Edit Profile</a> 
 				</article>
-				<section class="col-sm-2"><a href="/users" class="pull-sright"><img title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
+				<section class="col-sm-2"><a href="/users" class="pull-sright"><img id="avatar" title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
 			</section>
 		<hr>
 			<section class="row">
@@ -31,7 +31,12 @@
 						<li class="list-group-item text-muted" contenteditable="false">Profile</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span> {{Auth::User()->name . " " . Auth::User()->lname }}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{Auth::User()->email}}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender['name']}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Pais: </strong></span> {{Auth::User()->country}}</li>
+						@if(Auth::User()->country == 1 /* ARGENTINA*/)
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Provincia: </strong></span> {{Auth::User()->country}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Municipio: </strong></span> {{Auth::User()->country}}</li>
+						@endif
 					</ul>
 				
 					
