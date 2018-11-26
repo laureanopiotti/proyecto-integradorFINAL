@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('assets')
-	<link rel="stylesheet" href="{{asset('css/register.css')}}">
+<link rel="stylesheet" href="{{asset('css/register.css')}}">
 @endsection
 
 @section('content')
@@ -50,7 +50,7 @@
 		<div class="form-group">
                 <input id="password-confirm" type="password" class="form-control" placeholder="Confirmar Contrasena" name="password_confirmation" >
                 <p id="errorPass2"></p>
-            </div>
+        </div>
         <div class="form-group mx-auto">
             <h6 class="text-center">Ingresa tu genero</h6>
             <ul class="list-inline text-center">
@@ -59,7 +59,11 @@
                 <li class="list-inline-item"> <input id ="other" type="radio" name="genre" value="other" > Otro</li>
                 <p id= "errorGenres"></p>
             </ul>
-            </div>
+
+        </div>
+        <div id='country' class="form-group mx-auto">
+
+        </div>
 
 
         <div class="form-group">
@@ -99,5 +103,7 @@
     </form>
 </div>
 </div>
+
+<script src="{{asset('js/register.js')}}"></script>
 
 @endsection
