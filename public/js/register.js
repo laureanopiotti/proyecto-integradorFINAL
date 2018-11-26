@@ -10,3 +10,5 @@ fetch('https://restcountries.eu/rest/v2/all')
     output += '</select>';    
     document.getElementById('country').innerHTML = output;
     });
+
+
