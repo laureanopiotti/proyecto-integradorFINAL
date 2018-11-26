@@ -20,10 +20,11 @@ class UserUpdate extends Controller
     {
         $user = User::find($id);
 
+        // dd(\Hash::check($request->input('password'), $user->password));
         
         $this->validate($request, [
             "password" => 'nullable|alpha_num|required_unless:npassword, ""', function ($attribute, $value, $fail) {
-                if (!\Hash::check($value, $user->password)) {
+                if (\Hash::check($value, $user->password) == true) {
                     $fail($attribute.' is invalid.');
                 }
             },
@@ -31,6 +32,7 @@ class UserUpdate extends Controller
             "confirm-password" => 'nullable|alpha_num|min:8|same:npassword',
             "genre" => 'required',
             "name" => 'required',
+            // "lname" => 'required',
             "email" => 'required|email'
         ]);
             
@@ -46,6 +48,7 @@ else{
 
 
         $user->name = $request->input("name");
+        // $user->lname = $request->input("lname");
         $user->genre = $request->input("genre");
         $user->email = $request->input("email");
 

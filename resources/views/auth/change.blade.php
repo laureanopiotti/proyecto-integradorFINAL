@@ -31,18 +31,22 @@
                 </div> 
                 <div class="col-md-9 col-sm-6">
                     <article class="card-body p-2 pl-4">
-                        <h2>Name</h2>
+                        <h2>Nombre</h2>
                         <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="name" value="{{$user->name}}"></h3>
                         @if ($errors->has('name'))
                         <strong>{{ $errors->first('name') }}</strong>
         
                 @endif
                         <hr>
+                        <h2>Apellido</h2>
+                        <h3 class="title mb-3"><input type="text" style="width: 70%;" name="lname" id="lname" value="{{$user->lname}}"></h3>
+                        @if ($errors->has('lname'))
+                        <strong>{{ $errors->first('lname') }}</strong>
+        
+                @endif
+                        <hr>
                         <h2>Password</h2>
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="password" id="password" placeholder="Password"></h3>
-                        @if(isset($passwordk))
-                        {{$passwordk}}
-                        @endif
                         @if ($errors->has('password'))
                         <strong>{{ $errors->first('password') }}</strong>
         
@@ -97,15 +101,6 @@
                 
             </div>
         </form>
-        @if ($errors->any())
-        <div class="container alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     </div>
 </div>   
 @endsection  

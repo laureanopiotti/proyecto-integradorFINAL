@@ -10,7 +10,7 @@
 	<article class="title text-center p-3">
 		<h1>Accede a tu cuenta</h1>	
 	</article>
-	<form id="form02" class='container  p-3  mb-3' action="{{route("login")}}" method="post">
+	<form id="form02" name="formulario" class='container  p-3  mb-3' action="{{route("login")}}" method="post">
 	@csrf
 		<section class="form-group>
 			<label for="userEmail">Email</label>
@@ -42,6 +42,5 @@
 	</form>
 </div>
 
-<script src ="{{asset('js/login.js')}}"></script>
 
 @endsection

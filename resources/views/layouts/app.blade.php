@@ -167,6 +167,6 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src ="{{asset('js/login.js')}}"></script>
 
-      {{-- <script src ="{{asset('js/master.js')}}"></script> --}}
+      <script src ="{{asset('js/master.js')}}"></script>
 </body>
 </html>

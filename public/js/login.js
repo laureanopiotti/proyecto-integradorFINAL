@@ -1,7 +1,7 @@
 
 
 
-    var formulario = document.getElementById("form02")
+    var form = document.getElementById("form02")
     var email = document.getElementById("userEmail")
     var password = document.getElementById("inputPassword6")
     var errorPassword = document.getElementById("errorPassword")
@@ -9,13 +9,13 @@
     var emailRegex = (/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/)
 
 
-formulario.onsubmit = function(e)
+form.onsubmit = function(e)
 {
     if (!validaciones()){
      e.preventDefault()
    }
    else{
-      formulario.submit
+      form.submit
    }
    
 }
@@ -29,7 +29,7 @@ function validaciones() {
        errorEmail.setAttribute("class","invalid-feedback" )
        email.setAttribute("class", "form-control mx-sm-3 col-12 col-lg-6 is-invalid")
        email.addEventListener("change", changeEmail)
-
+       
        return false
     }
     if(email.value === "" || email.value === null || emailRegex.test(email.value)!==true)
@@ -44,7 +44,7 @@ function validaciones() {
     function changeEmail(){
                 errorEmail.innerHTML = ""
                 errorEmail.setAttribute("class","" )
-                email.setAttribute("class", "form-control")
+                email.setAttribute("class", "form-control  mx-sm-3 col-12 col-lg-6")
                      }
 
                      if(password.value === "" || password.value === null)
@@ -56,11 +56,13 @@ function validaciones() {
                         return false;
         
                      }
-                     function changePassword()
-                        {
-                        errorPass.innerHTML = ""
-                        errorPass.setAttribute("class","" )
-                        password.setAttribute("class", "form-control")
+
+                     function changePassword(){
+                        errorPassword.innerHTML = ""
+                        errorPassword.setAttribute("class","" )
+                        password.setAttribute("class", "form-control  mx-sm-3 col-12 col-lg-6")
                         }
+
+                        return true;
 
                     }
