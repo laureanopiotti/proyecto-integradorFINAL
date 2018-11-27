@@ -17,59 +17,40 @@
         <form class='form-group' method="POST" action="{{route('update',['id' => $user->id])}}" enctype="multipart/form-data" >
             @method('PUT')
             @csrf
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid mb-4 mt-4">
-                        <div class="product-image">
+            <article class="row">
+                <section class="col-md-3 col-sm-6">
+                    <article class="product-grid mb-4 mt-4">
+                        <section class="product-image">
                             <img class="pic-1" src="{{asset($user->avatar)}}">
-                        </div>
-                    </div>
-                    <div class='container-fluid p-0 mb-4'>
+                        </section>
+                    </article>
+                    <article class='container-fluid p-0 mb-4'>
                         <label for="imageLoc">Cambiar avatar</label>
                         <input type="file" value="avatar" class='form-control-file' name="avatar" id="avatar">
-                    </div>
-                </div> 
-                <div class="col-md-9 col-sm-6">
+                    </article>
+                </section> 
+                <section class="col-md-9 col-sm-6">
                     <article class="card-body p-2 pl-4">
                         <h2>Nombre</h2>
                         <h3 class="title mb-3"><input type="text" style="width: 70%;" name="name" id="name" value="{{$user->name}}"></h3>
-                        @if ($errors->has('name'))
                         <strong>{{ $errors->first('name') }}</strong>
-        
-                @endif
                         <hr>
                         <h2>Apellido</h2>
                         <h3 class="title mb-3"><input type="text" style="width: 70%;" name="lname" id="lname" value="{{$user->lname}}"></h3>
-                        @if ($errors->has('lname'))
                         <strong>{{ $errors->first('lname') }}</strong>
-        
-                @endif
                         <hr>
                         <h2>Password</h2>
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="password" id="password" placeholder="Password"></h3>
-                        @if ($errors->has('password'))
                         <strong>{{ $errors->first('password') }}</strong>
-        
-                @endif
                         <hr>
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="npassword" id="npassword" placeholder="New Password"></h3>
-                        @if ($errors->has('npassword'))
                         <strong>{{ $errors->first('npassword') }}</strong>
-        
-                @endif
                         <h3 class="title mb-3"><input type="password" style="width: 70%;" name="confirm-password" id="confirm-password" placeholder="Confirm Password"></h3>
-                        @if ($errors->has('confirm-password'))
                         <strong>{{ $errors->first('confirm-password') }}</strong>
-        
-                @endif
                         <hr>
-                            <h2>Email</h2>
-                            <h3 class="title mb-3"><input type="text" style="width: 70%;" name="email" id="email" value="{{$user->email}}"></h3>
-                            @if ($errors->has('email'))
-                            <strong>{{ $errors->first('email') }}</strong>
-            
-                    @endif
-                        
+                        <h2>Email</h2>
+                        <h3 class="title mb-3"><input type="text" style="width: 70%;" name="email" id="email" value="{{$user->email}}"></h3>
+                        <strong>{{ $errors->first('email') }}</strong>
                         <dl class="item-property param param-feature">
                             <dt>Género</dt>
                             <dd>
@@ -92,15 +73,18 @@
                             <dt>Modificado el</dt>
                             <dd>{{$user->updated_at}}</dd>
                         </dl>
-                        <div class='container-fluid p-0'>
+                        <section class='container-fluid p-0'>
                             <a href="{{route('profile')}}" class="btn btn-info btn-md">Volver</a>
                             <input type="submit" class="btn btn-primary btn-md" value="Actualizar">
-                        </div>
+                        </section>
                     </article> 
-                </div> 
+                </section> 
                 
-            </div>
+            </article>
         </form>
     </div>
 </div>   
+
+<script src ="{{asset('js/login.js')}}"></script>
+
 @endsection  

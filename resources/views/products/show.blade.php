@@ -14,14 +14,14 @@
   <body>
 	
 	<div class="container">
-		<div class="card">
+		<section class="card">
 			<div class="container-fliud">
-				<div class="wrapper row">
-					<div class="preview col-md-6">
-						<div class="preview-pic tab-content">
-                        <div class="tab-pane active justify-content-center" style="margin-left:20px"id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></div>
-						  <div class="tab-pane" style="margin-left:20px" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
-						</div>
+				<article class="wrapper row">
+					<section class="preview col-md-6">
+						<article class="preview-pic tab-content">
+                        <section class="tab-pane active justify-content-center" style="margin-left:35px"id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></section>
+						  <section class="tab-pane" style="margin-left:35px" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></section>
+						</article>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
 						  <li><a data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
@@ -29,11 +29,11 @@
 
 						</ul>
 						
-					</div>
-					<div class="details col-md-6">
+					</section>
+					<section class="details col-md-6">
                     <h3 class="product-title">{{$product->name}}</h3>
                     <h4 class=product-title>{{$product->genre['name']}}</h4>
-						<div class="rating">
+						<article class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
@@ -41,7 +41,7 @@
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
 							</div>
-						</div>
+						</article>
                     <p class="product-description">{{$product->description}}</p>
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
@@ -49,13 +49,13 @@
 						<span class="size" data-toggle="tooltip" title="small">{{$product->size_id}}</span>
 						</h5>
 						
-						<div class="action">
+						<article class="action">
 							<a href={{route('cart.add', $product->id)}} class="add-to-cart btn btn-default" type="button">ANADIR AL CARRITO</a>
-						</div>
-					</div>
-				</div>
+						</article>
+					</section>
+				</article>
 			</div>
-		</div>
+		</section>
 		<br>
 	</div>
   </body>
