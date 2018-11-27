@@ -106,8 +106,8 @@
         </form>
 </section>
 </div>
-<script src ="{{asset('js/master.js')}}"></script>
 
+<script src ="{{asset('js/master.js')}}"></script>
 <script src="{{asset('js/register.js')}}"></script>
 
 @endsection

@@ -12,7 +12,6 @@
 //     });
 
 
-window.onload=function(){
     var provinciaselect = document.querySelector("#provincia")
     var municipioselect = document.querySelector("#municipio")
     var seleccion = ''
@@ -76,4 +75,4 @@ provinciaselect.addEventListener('change', function() {
 
 
 
-}
+

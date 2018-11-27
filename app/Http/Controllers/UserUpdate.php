@@ -32,7 +32,7 @@ class UserUpdate extends Controller
             "confirm-password" => 'nullable|alpha_num|min:8|same:npassword',
             "genre" => 'required',
             "name" => 'required',
-            // "lname" => 'required',
+            "lname" => 'required',
             "email" => 'required|email'
         ]);
             
@@ -48,7 +48,7 @@ else{
 
 
         $user->name = $request->input("name");
-        // $user->lname = $request->input("lname");
+        $user->lname = $request->input("lname");
         $user->genre = $request->input("genre");
         $user->email = $request->input("email");
 
@@ -67,6 +67,6 @@ else{
         $user->save();
 
 
-        return view('profile') ;
+        return route('profile') ;
     }
 }

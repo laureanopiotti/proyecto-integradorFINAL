@@ -71,7 +71,7 @@
                         </dl>
                         <dl class="item-property">
                             <dt>Modificado el</dt>
-                            <dd>{{$user->updated_at}}</dd>
+                            <dd>{{$user->updated_at}}</dd> 
                         </dl>
                         <section class='container-fluid p-0'>
                             <a href="{{route('profile')}}" class="btn btn-info btn-md">Volver</a>

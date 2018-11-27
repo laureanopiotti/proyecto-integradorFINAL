@@ -1,7 +1,3 @@
-window.onload  = function()
-{
-
-
 
     var name = document.getElementById("name")
     var errorName = document.getElementById("errorName")
@@ -244,7 +240,6 @@ function changeAva(){
 
 
 
-}
 
 
 

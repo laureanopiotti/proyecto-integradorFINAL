@@ -82,7 +82,7 @@
         <section class="col mb-2">
             <article class="row">
                 <section class="col-sm-12  col-md-6">
-                <button href='{{route('men')}}' class="btn btn-block btn-light">Continue Shopping</button>
+                <a href='{{route('men')}}' class="btn btn-block btn-light">Continue Shopping</a>
                 </section>
                 <section class="col-sm-12 col-md-6 text-right">
                     <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
