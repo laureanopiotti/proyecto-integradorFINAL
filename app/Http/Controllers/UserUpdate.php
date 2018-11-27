@@ -67,6 +67,6 @@ else{
         $user->save();
 
 
-        return route('profile') ;
+        return redirect(route('profile')); 
     }
 }
