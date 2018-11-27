@@ -24,10 +24,10 @@ class UserUpdate extends Controller
         
         $this->validate($request, [
             "password" => 'nullable|alpha_num|required_unless:npassword, ""', function ($attribute, $value, $fail) {
-                if (\Hash::check($value, $user->password) == true) {
+                if (!\Hash::check($value, $user->password) == true) {
                     $fail($attribute.' is invalid.');
                 }
-            },
+              },
             "npassword" => 'nullable|alpha_num|min:8',
             "confirm-password" => 'nullable|alpha_num|min:8|same:npassword',
             "genre" => 'required',
