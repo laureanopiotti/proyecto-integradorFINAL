@@ -13,23 +13,23 @@
 @endsection
 @section('content')
 <div id='product-container' class="container-fluid p-0">
-    <div class="container pt-3 pb-3">
+    <section class="container pt-3 pb-3">
         <form class='form-group' method="POST" action="{{route('users.update',['id' => $user->id])}}" enctype="multipart/form-data" >
             @method('PUT')
             @csrf
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="product-grid mb-4 mt-4">
+            <article class="row">
+                <section class="col-md-3 col-sm-6">
+                    <article class="product-grid mb-4 mt-4">
                         <div class="product-image">
                             <img class="pic-1" src="{{asset($user->avatar)}}">
                         </div>
-                    </div>
-                    <div class='container-fluid p-0 mb-4'>
+                    </article>
+                    <article class='container-fluid p-0 mb-4'>
                         <label for="imageLoc">Cambiar avatar</label>
                         <input type="file" value="avatar" class='form-control-file' name="avatar" id="avatar">
-                    </div>
-                </div> 
-                <div class="col-md-9 col-sm-6">
+                    </article>
+                </section> 
+                <section class="col-md-9 col-sm-6">
                     <article class="card-body p-2 pl-4">
                         <h3 class="title mb-3"><input type="text" style="width: 100%;" name="name" id="name" value="{{$user->name}}"></h3>
                         <hr>
@@ -64,9 +64,9 @@
                             <input type="submit" class="btn btn-primary btn-md" value="Actualizar">
                         </div>
                     </article> 
-                </div> 
+                </section> 
                 
-            </div>
+            </article>
         </form>
         @if ($errors->any())
         <div class="container alert alert-danger">
@@ -77,6 +77,6 @@
             </ul>
         </div>
     @endif
-    </div>
+    </section>
 </div>   
 @endsection  

@@ -43,16 +43,16 @@
 
 @section('content')
 <div id='product-container' class="container-fluid p-0">
-    <div class="container pt-3 pb-3">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="product-grid mb-4 mt-4">
+    <section class="container pt-3 pb-3">
+        <article class="row">
+            <section class="col-md-3 col-sm-6">
+                <article class="product-grid mb-4 mt-4">
                     <div class="product-image">
                         <img class="pic-1" src="{{asset($product->imageLoc)}}">
                         <img class="pic-2" src="{{asset($product->imageLoc2)}}">
                     </div>
-                </div>
-                <div class='container-fluid p-0 text-center'>
+                </article>
+                <article class='container-fluid p-0 text-center'>
                     <a href="{{route('products.edit', ['id' => $product->id])}}" class="btn btn-primary btn-sm btn-block"><i class="text-white material-icons">&#xE254;</i></a>
                     <form id='form-delete' class='form-delete' action="{{route('products.destroy',['id' => $product->id])}}" method="post">
                         @method('delete')
@@ -60,9 +60,9 @@
                         <a href='#' id='delete-link' class="btn btn-danger btn-sm btn-block" data-toggle="tooltip" title="Delete"><i class="text-white material-icons">&#xE872;</i></a>
 					</form>
                     <a href="{{route('products.index')}}" class="edit btn btn-info btn-sm btn-block"><i class="text-white material-icons">arrow_back</i></a>
-                </div>
-            </div> 
-            <div class="col-md-9 col-sm-6">
+                </article>
+            </section> 
+            <section class="col-md-9 col-sm-6">
                 <article class="card-body p-2 pl-4">
                     <h3 class="title mb-3">{{$product->name}}</h3>
                     <hr>
@@ -92,8 +92,8 @@
                     </dl>  <!-- item-property-hor .// -->
                     <hr>
                 </article> 
-            </div> 
-        </div>
-    </div>
+            </section> 
+        </article>
+    </section>
 </div>   
 @endsection  

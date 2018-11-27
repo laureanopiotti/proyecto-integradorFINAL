@@ -14,17 +14,17 @@
 
 @section('content')
 <div class="container-fluid p-0">
-	<div class="table-wrapper m-0">
-		<div class="table-title">
-			<div class="row">
-				<div class="col-sm-6">
+	<section class="table-wrapper m-0">
+		<article class="table-title">
+			<section class="row">
+				<article class="col-sm-6">
 					<h2>Administración de <strong>Productos</strong></h2>
-				</div>
-				<div class="col-sm-6">						
+				</article>
+				<article class="col-sm-6">						
 					<a href="{{route('products.create')}}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Agregar</span></a>
-				</div>
-			</div>
-		</div>
+				</article>
+			</section>
+		</article>
 		<table id='table' class="table table-striped table-hover  w-100">
 			<thead class='w-100'>
 				<tr>
@@ -60,6 +60,6 @@
 				@endforeach
 			</tbody>
 		</table>
-	</div>
+	</section>
 </div>
 @endsection
