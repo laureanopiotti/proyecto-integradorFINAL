@@ -14,14 +14,14 @@
 
 @section('content')
 <div class="container-fluid p-0">
-	<div class="table-wrapper m-0">
-		<div class="table-title">
-			<div class="row">
+	<section class="table-wrapper m-0">
+		<article class="table-title">
+			<section class="row">
 				<div class="col-sm-6">
 					<h2>Administración de <strong>Usuarios</strong></h2>
 				</div>
-			</div>
-		</div>
+			</section>
+		</article>
 		<table id='table' class="table table-striped table-hover  w-100">
 			<thead class='w-100'>
 				<tr>
@@ -34,7 +34,7 @@
 			</thead>
 			<tbody class='w-100'>
 				@foreach ($users as $user) 
-				<tr>
+				<tr> 
 					<td><a href="{{route('users.show',['id' => $user->id])}}">{{$user->name}}</a></td>
 					<td>{{$user->email}}</td>
 					<td>{{$user->created_at}}</td>
@@ -51,6 +51,6 @@
 				@endforeach
 			</tbody>
 		</table>
-	</div>
+	</section>
 </div>
 @endsection
