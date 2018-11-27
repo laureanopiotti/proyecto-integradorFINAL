@@ -15,7 +15,6 @@
 window.onload=function(){
     var provinciaselect = document.querySelector("#provincia")
     var municipioselect = document.querySelector("#municipio")
-    console.log(provinciaselect)
     var seleccion = ''
 
     function datos () {
@@ -58,7 +57,6 @@ provinciaselect.addEventListener('change', function() {
         fetch("https://apis.datos.gob.ar/georef/api/municipios?provincia="+seleccion+"&campos=id,nombre&max=100")
         .then(resultado => resultado.json())
         .then(data => {
-                console.log(municipioselect)
                 var select = document.createElement('select')
                 select.name = 'municipio'
                 select.classList.add('custom-select')

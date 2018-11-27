@@ -70,10 +70,17 @@
                         <dd><p>{{$user->email}}</p></dd>
                     </dl>
                     <dl class="item-property">
-                        <dt>Genero</dt>
-                        <dd><p>@if ($user->genre == null) Ninguno @else {{$user->genre}}   @endif</p></dd>
+                            <dt>Genero</dt>
+                            <dd><p>@if ($user->genre == null) Ninguno @else {{$user->genre}}   @endif</p></dd>
                     </dl>
-                    
+                    <dl class="item-property">
+                        <dt>Provincia</dt>
+                        <dd><p>{{$user->provincia}}</p></dd>
+                    </dl>
+                    <dl class="item-property">
+                        <dt>Municipio</dt>
+                        <dd><p>{{$user->municipio}}</p></dd>
+                    </dl>
                     <dl class="param param-feature">
                         <dt>Fecha de creacion</dt>
                         <dd>{{$user->created_at}}</dd>

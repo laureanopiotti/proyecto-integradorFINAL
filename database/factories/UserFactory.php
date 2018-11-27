@@ -17,6 +17,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     return [
         'name' => 'root',
         'email' => 'root',
+        'lname' => 'root',
         'genre' => null,
         'avatar' => 'storage/avatars/root.jpg',
         'role' => 7,
@@ -24,5 +25,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
         'provider' => null,
         'provider_id' => null,
+        'municipio' => null,
+        'provincia' => null,
     ];
 });
