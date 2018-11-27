@@ -21,7 +21,7 @@
 				<h1 class="">{{Auth::User()->name . " " . Auth::User()->lname}}</h1>
 				<a  href="{{route('edit', Auth::User()->id)}}" class="btn btn-warning">Edit Profile</a> 
 				</article>
-				<section class="col-sm-2"><a href="/users" class="pull-sright"><img id="avatar" title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
+				<section class="col-sm-2"><a href="" class="pull-sright"><img id="avatar" title="profile image" class="img-circle img-responsive" src="{{asset(Auth::User()->avatar)}}"></a></section>
 			</section>
 		<hr>
 			<section class="row">
@@ -29,10 +29,10 @@
 					<!--left col-->
 					<ul class="list-group">
 						<li class="list-group-item text-muted" contenteditable="false">Profile</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span> {{Auth::User()->name . " " . Auth::User()->lname }}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{Auth::User()->email}}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender['name']}}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Lugar de Residencia: </strong></span> {{Auth::User()->municipio}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span>{{Auth::User()->name . " " . Auth::User()->lname }}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span>{{Auth::User()->email}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span>{{Auth::User()->genre}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Lugar de Residencia: </strong></span>{{Auth::User()->municipio}}</li>
 					</ul>
 				
 					

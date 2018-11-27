@@ -45,7 +45,8 @@
                                 <td class="initialism">{{$product['name']}}</td>
                                 <td class="">{{$product['description']}}</td>
                                 <td >In stock</td>
-                                <td><input class="form-control" type="text" value="1" /></td>
+                                <td><input id="quantity" class="form-control" type="number" value="1" /></td>
+                                <p id="errorQuantity"></p>
                                 <td class="text-right">$ {{$product['price']}}</td>
                                 <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
                             </tr>
@@ -70,7 +71,7 @@
                         <td></td>
                         <td><strong>Total</strong></td>
                         <td></td>
-                    <td class="">$ {{$total}}</td>
+                    <td class="total"></td>
                         <td></td>
 
                         </tr>
@@ -81,7 +82,7 @@
         <section class="col mb-2">
             <article class="row">
                 <section class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                <button href='{{route('men')}}' class="btn btn-block btn-light">Continue Shopping</button>
                 </section>
                 <section class="col-sm-12 col-md-6 text-right">
                     <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
@@ -94,7 +95,9 @@
 
 @else
 <h2> USTED NO TIENE NADA EN EL CARRITO </h2>
-@endif                               
+@endif         
+
+<script src ="{{asset('js/cart.js')}}"></script>
 
 
 @endsection
