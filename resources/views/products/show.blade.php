@@ -19,8 +19,8 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
-                        <div class="tab-pane active justify-content-center" id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></div>
-						  <div class="tab-pane" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
+                        <div class="tab-pane active d-flex justify-content-center" id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></div>
+						  <div class="tab-pane d-flex" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
