@@ -15,6 +15,7 @@
 window.onload=function(){
     var provinciaselect = document.querySelector("#provincia")
     var municipioselect = document.querySelector("#municipio")
+    console.log(provinciaselect)
     var seleccion = ''
 
     function datos () {
@@ -35,6 +36,9 @@ window.onload=function(){
             select.id = 'provincia1'
             select.classList.add('custom-select')
             provinciaselect.appendChild(select)
+            var opcionseleccionar = document.createElement("option")
+            select.appendChild(opcionseleccionar)
+            opcionseleccionar.innerHTML = "<option>Seleccionar</option>";
             for (var indice of data.provincias) {
                 var opciones = document.createElement("option")
                 opciones.value = indice.id
@@ -54,6 +58,7 @@ provinciaselect.addEventListener('change', function() {
         fetch("https://apis.datos.gob.ar/georef/api/municipios?provincia="+seleccion+"&campos=id,nombre&max=100")
         .then(resultado => resultado.json())
         .then(data => {
+                console.log(municipioselect)
                 var select = document.createElement('select')
                 select.name = 'municipio'
                 select.classList.add('custom-select')
@@ -62,7 +67,7 @@ provinciaselect.addEventListener('change', function() {
                 select.innerHTML = "<option>Seleccionar</option>";
             for (var indice of data.municipios){
                 var opcionesMuni = document.createElement("option")
-                opcionesMuni.value = indice.indice
+                opcionesMuni.value = indice.id
                 opcionesMuni.innerHTML = indice.nombre
                 select.appendChild(opcionesMuni)
             }

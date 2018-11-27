@@ -61,7 +61,11 @@
                 </ul>
 
             </article>
-            <article id='country' class="form-group mx-auto">
+            <article id='provincia' class="form-group mx-auto">
+                <h6 class="text-center">Ingresa tu provincia de residencia</h6>
+
+            </article>
+            <article id='municipio' class="form-group mx-auto">
 
             </article>
 
@@ -102,8 +106,8 @@
         </form>
 </section>
 </div>
+<script src ="{{asset('js/master.js')}}"></script>
 
 <script src="{{asset('js/register.js')}}"></script>
-<script src ="{{asset('js/master.js')}}"></script>
 
 @endsection
