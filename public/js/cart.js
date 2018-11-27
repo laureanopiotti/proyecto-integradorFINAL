@@ -14,7 +14,7 @@ window.onload = function(){
         quantity.addEventListener("change", change)
         return false;
     }
-    total.innerText = subtotal.innerText * quantity
+    total.innerText = subtotal.value * quantity
 
 
         function change(){

@@ -48,7 +48,7 @@
                                 <td><input id="quantity" class="form-control" type="number" value="1" /></td>
                                 <p id="errorQuantity"></p>
                                 <td class="text-right">$ {{$product['price']}}</td>
-                                <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                            <td class="text-right"><a href='{{route('cart.remove', $product['id'])}}' class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> </td>
                             </tr>
 
 
