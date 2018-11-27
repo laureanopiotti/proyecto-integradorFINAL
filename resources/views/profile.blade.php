@@ -33,7 +33,6 @@
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{Auth::User()->email}}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender['name']}}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Lugar de Residencia: </strong></span> {{Auth::User()->municipio}}</li>
-						@endif
 					</ul>
 				
 					
