@@ -19,13 +19,13 @@
 				<div class="wrapper row">
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
-                        <div class="tab-pane active" id="pic-1"><img class="asd" src="{{$product->imageLoc}}" /></div>
-						  <div class="tab-pane" id="pic-2"><img class="asd" src="{{$product->imageLoc2}}" /></div>
+                        <div class="tab-pane active d-flex justify-content-center" id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></div>
+						  <div class="tab-pane" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img  src="{{$product->imageLoc}}" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{$product->imageLoc2}}" /></a></li>
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
 
 						</ul>
 						

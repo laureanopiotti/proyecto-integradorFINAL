@@ -52,8 +52,8 @@ img {
             animation-duration: .3s; }
 
 .asd{
- width: 360px;
- height: 460px;
+ width: 360px !important;
+ height: 460px !important;
 }
        
             
