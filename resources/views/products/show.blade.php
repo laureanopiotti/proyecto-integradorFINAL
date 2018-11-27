@@ -24,8 +24,8 @@
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
+						  <li><a data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
+						  <li><a class="active" data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
 
 						</ul>
 						
