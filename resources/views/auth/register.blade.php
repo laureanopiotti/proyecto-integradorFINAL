@@ -61,7 +61,12 @@
             </ul>
 
         </div>
-        <div id='country' class="form-group mx-auto">
+        <div id='provincia' class="form-group mx-auto">
+            <h6 class="text-center">Ingresa tu provincia de residencia</h6>
+
+
+        </div>
+        <div id='municipio' class="form-group mx-auto">
 
         </div>
 
