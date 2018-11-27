@@ -42,5 +42,5 @@
 	</form>
 </div>
 
-
+<script src ="{{asset('js/login.js')}}"></script>
 @endsection

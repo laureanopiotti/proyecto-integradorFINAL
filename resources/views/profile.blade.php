@@ -32,10 +32,7 @@
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Name: </strong></span> {{Auth::User()->name . " " . Auth::User()->lname }}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Email: </strong></span> {{Auth::User()->email}}</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Sex: </strong></span> {{Auth::User()->gender['name']}}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Pais: </strong></span> {{Auth::User()->country}}</li>
-						@if(Auth::User()->country == 1 /* ARGENTINA*/)
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Provincia: </strong></span> {{Auth::User()->country}}</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Municipio: </strong></span> {{Auth::User()->country}}</li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class="">Lugar de Residencia: </strong></span> {{Auth::User()->municipio}}</li>
 						@endif
 					</ul>
 				

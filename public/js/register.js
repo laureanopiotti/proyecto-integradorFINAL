@@ -65,7 +65,7 @@ provinciaselect.addEventListener('change', function() {
                 select.innerHTML = "<option>Seleccionar</option>";
             for (var indice of data.municipios){
                 var opcionesMuni = document.createElement("option")
-                opcionesMuni.value = indice.id
+                opcionesMuni.value = indice.nombre
                 opcionesMuni.innerHTML = indice.nombre
                 select.appendChild(opcionesMuni)
             }
