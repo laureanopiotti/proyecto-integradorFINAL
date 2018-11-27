@@ -10,6 +10,7 @@ class CartController extends Controller
     {
       $product =  \App\Product::find($id);
       $product = [
+            'id' => $product->id,
             "name" => $product->name,
             'description' => $product->description,
             'genre' => $product->genre,
@@ -29,7 +30,8 @@ class CartController extends Controller
     }
     public function remove($id)
     {
-        session()->pull('user.cart.' . $id);
+        
+        session()->pull('user.cart.' . $id, "default");
         return view('cart');
     }
 

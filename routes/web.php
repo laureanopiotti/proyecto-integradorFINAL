@@ -31,7 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','role']], function ()
 Route::get('/profile', "UserController@show")->name("profile")->middleware('auth');
 
 Route::get('cart/add/{id}', "CartController@add")->name('cart.add')->middleware('auth');
-Route::get('cart/remove/{id}', "CartController@add")->name('cart.remove')->middleware('auth');
+Route::get('cart/remove/{id}', "CartController@remove")->name('cart.remove')->middleware('auth');
 
 Route::get('/cart', 'CartController@show')->name('cart')->middleware('auth');
 Auth::routes();
