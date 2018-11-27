@@ -60,7 +60,7 @@
                         <td></td>
                         <td>Sub-Total</td>
                         <td></td>
-                        <td class="text-right">$ {{$total}}</td>
+                        <td class="text-right" id="subtotal">$ {{$total}}</td>
                         <td></td>
 
                     </tr>

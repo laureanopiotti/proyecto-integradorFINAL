@@ -14,9 +14,8 @@ window.onload = function(){
         quantity.addEventListener("change", change)
         return false;
     }
-    else{
-    total = subtotal * quantity
-    }
+    total.innerText = subtotal.innerText * quantity
+
 
         function change(){
         error.innerHTML = ""

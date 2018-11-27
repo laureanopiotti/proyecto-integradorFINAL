@@ -27,5 +27,10 @@ class CartController extends Controller
         return view('cart');
 
     }
+    public function remove($id)
+    {
+        session()->pull('user.cart.' . $id);
+        return view('cart');
+    }
 
 }
