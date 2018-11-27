@@ -20,7 +20,7 @@
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
                         <div class="tab-pane active justify-content-center" style="margin-left:20px"id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></div>
-						  <div class="tab-pane" style="margin-left:20px id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
+						  <div class="tab-pane" style="margin-left:20px" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
