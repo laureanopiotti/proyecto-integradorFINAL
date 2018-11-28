@@ -169,3 +169,14 @@ img {
             transform: scale(1); } }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+@media (max-width:320px){
+  .asd{
+    width:35vw;
+    height: 25vh;
+  }
+}
+
+
