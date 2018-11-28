@@ -24,15 +24,16 @@
 						</article>
 						<ul class="preview-thumbnail nav nav-tabs">
 							
-						  <li><a data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
-						  <li><a class="active" data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
+						  <li><a class="active" data-target="#pic-1" data-toggle="tab"><img  src="{{asset($product->imageLoc)}}" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="{{asset($product->imageLoc2)}}" /></a></li>
 
 						</ul>
 						
 					</section>
 					<section class="details col-md-6">
                     <h3 class="product-title">{{$product->name}}</h3>
-                    <h4 class=product-title>{{$product->genre['name']}}</h4>
+										<h4 class=product-title>{{$product->genre['name']}}</h4>
+										<h4 class=product-title>{{$product->category['name']}}</h4>
 						<article class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -46,7 +47,7 @@
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
 						<h5 class="sizes">size: 
-						<span class="size" data-toggle="tooltip" title="small">{{$product->size_id}}</span>
+						<span class="size" data-toggle="tooltip" title="small">{{$product->size['name']}}</span>
 						</h5>
 						
 						<article class="action">
