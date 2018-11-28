@@ -177,3 +177,10 @@ img {
     width:35vw;
   }
 }
+
+
+@media (max-width:760px){
+  .asd{
+    width: 35vw;
+  }
+}
