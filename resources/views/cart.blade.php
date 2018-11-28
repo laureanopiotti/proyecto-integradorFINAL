@@ -12,12 +12,13 @@
 
 <div class="container col-10">
     <section class="row">
+        @if (session()->get('user.cart'))
+
         <article class="col-12">
             <br>
             <section class="table-responsive">
                 <table class="table table-striped">
                     <thead>
-                            @if (session()->get('user.cart'))
 
                         <tr>
                             <th scope="col"> </th>
@@ -90,14 +91,16 @@
             </article>
             <br>
         </section>
-    </section>
+            
+            @else
+            <div class='container mb-5 mt-5'>
+                <h2 class='text-center mb-5 mt-5'> USTED NO TIENE NADA EN EL CARRITO </h2>
+            </div>
+            @endif  
+
+</section>
 </div>
 
-@else
-<h2> USTED NO TIENE NADA EN EL CARRITO </h2>
-@endif         
 
 <script src ="{{asset('js/cart.js')}}"></script>
-
-
 @endsection
