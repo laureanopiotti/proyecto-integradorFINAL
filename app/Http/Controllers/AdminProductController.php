@@ -53,8 +53,8 @@ class AdminProductController extends Controller
             "price" => 'required|integer',
             "size_id" => "required",
             "stock" => "required|integer",
-            "imageLoc" => "image",
-            "imageLoc2" => "image",
+            "imageLoc" => "image|dimensions:min_width=340,max_width=366,min_height=440,max_height=466",
+            "imageLoc2" => "image|dimensions:min_width=340,max_width=366,min_height=440,max_height=466",
         ]);
 
         $product = new Product([
@@ -136,8 +136,8 @@ class AdminProductController extends Controller
             "price" => 'required|integer',
             "size_id" => "required",
             "stock" => "required|integer",
-            "imageLoc" => "image|dimensions:min_width=340,max_width=366,min_height=440,max_height=466",
-            "imageLoc2" => "image|dimensions:min_width=340,max_width=366,min_height=440,max_height=466",
+            "imageLoc" => "image4",
+            "imageLoc2" => "image",
         ]);
 
         $product = Product::find($id);
