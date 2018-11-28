@@ -33,7 +33,7 @@
 					<section class="details col-md-6">
                     <h3 class="product-title">{{$product->name}}</h3>
 										<h4 class=product-title>{{$product->genre['name']}}</h4>
-										<h4 class=product-title>{{$product->category['name']}}</h4>
+										<h5 class=product-title>{{$product->category['name']}}</h5>
 						<article class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -47,7 +47,7 @@
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
 						<h5 class="sizes">size: 
-						<span class="size" data-toggle="tooltip" title="small">{{$product->size['name']}}</span>
+						<h6 class="size" data-toggle="tooltip" title="small">{{$product->size['name']}}</h6>
 						</h5>
 						
 						<article class="action">
