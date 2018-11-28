@@ -172,15 +172,10 @@ img {
 
 
 
-@media (max-width:420px){
+@media (min-width:320px){
   .asd{
     width:35vw;
   }
 }
 
 
-@media (max-width:760px){
-  .asd{
-    width: 35vw;
-  }
-}
