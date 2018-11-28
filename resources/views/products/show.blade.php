@@ -19,7 +19,7 @@
 				<article class="wrapper row">
 					<section class="preview col-md-6">
 						<article class="preview-pic tab-content">
-                        <section class="tab-pane active justify-content-center" style="margin-left:35px"id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></section>
+              <section class="tab-pane active justify-content-center" style="margin-left:35px"id="pic-1"><img class="asd" src="{{asset($product->imageLoc)}}" /></section>
 						  <section class="tab-pane" style="margin-left:35px" id="pic-2"><img class="asd" src="{{asset($product->imageLoc2)}}" /></section>
 						</article>
 						<ul class="preview-thumbnail nav nav-tabs">
@@ -47,11 +47,11 @@
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
 						<h5 class="sizes">size: 
-						<h6 class="size" data-toggle="tooltip" title="small">{{$product->size['name']}}</h6>
+						<h6 class="size" data-toggle="tooltip" title="small">{{$product->size['size']}}</h6>
 						</h5>
 						
 						<article class="action">
-							<a href={{route('cart.add', $product->id)}} class="add-to-cart btn btn-default" type="button">ANADIR AL CARRITO</a>
+							<a href={{route('cart.add', $product->id)}} class="add-to-cart btn btn-default" type="button">AÑADIR AL CARRITO</a>
 						</article>
 					</section>
 				</article>
