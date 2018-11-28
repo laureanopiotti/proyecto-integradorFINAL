@@ -47,7 +47,7 @@
                     <h4 class="price">PRECIO: <span>${{$product->price}}</span></h4>
 						<p class="vote"><strong>Denunciar este producto</strong></p>
 						<h5 class="sizes">size: 
-						<h6 class="size" data-toggle="tooltip" title="small">{{$product->size['size']}}</h6>
+						<span class="size" data-toggle="tooltip" title="small">{{$product->size['size']}}</span>
 						</h5>
 						
 						<article class="action">
