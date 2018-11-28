@@ -19,22 +19,22 @@
         <article class="carousel-item active">
         <img class="d-block w-100" src="{{asset('images/carousel/fashion-1.jpg')}}" alt="First slide">
         <article class="carousel-caption d-none d-md-block">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <h5>Lorem, ipsum dolor.</h5>
+            <h3 class="carousel"><a href="{{route('women')}}">Coleccion verano para mujeres</a></h3>
+            <h5>Este verano, es PIERRE</h5>
         </article>
         </article>
         <article class="carousel-item">
         <img class="d-block w-100 height: 200px" src="{{asset('images/carousel/fashion-2.jpg')}}" alt="Second slide">
         <article class="carousel-caption d-none d-md-block">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <h5>Lorem, ipsum dolor.</h5>
+        <h3 class="carousel"><a href="{{route('men')}}">Coleccion verano para hombres</a></h3>
+        <h5>Este verano, es PIERRE</h5>
         </article>
         </article>
         <article class="carousel-item">
         <img class="d-block w-100 height: 200px" src="{{asset('images/carousel/fashion-3.jpg')}}" alt="Third slide">
         <article class="carousel-caption d-none d-md-block">
-            <h3>Lorem ipsum dolor sit amet.</h3>
-            <h5>Lorem, ipsum dolor.</h5>
+            <h3 class="carousel"><a href="{{route('kids')}}">Coleccion verano para los nenes</a></h3>
+            <h5>Este verano, es PIERRE</h5>
         </article>
         </article>
     </section>
@@ -53,21 +53,21 @@
         <article class="row">
             <section class="col-lg-4">
                 <img class="rounded-circle" src="{{asset('images/main/image-1.jpg')}}" alt="Generic placeholder image" width="140" height="140">
-                <h2>Titulo 1</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum neque culpa magni excepturi, hic distinctio aperiam at adipisci quisquam quod.</p>
+                <h2>Desfiles anuales</h2>
+                <p>Cada año PIERRE lanza al publico desfiles, donde publicitan su marca con diseñadores internacionales y modelos tienen chance de crecer exponencialmente</p>
                 <p><a class="btn btn-dark" href="#" role="button">Ver más&raquo;</a></p>
             </section><!-- /.col-lg-4 -->
             <section class="col-lg-4">
                 <img class="rounded-circle" src="{{asset('images/main/image-2.jpg')}}" alt="Generic placeholder image" width="140" height="140">
-                <h2>Titulo 2</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum neque culpa magni excepturi, hic distinctio aperiam at adipisci quisquam quod.</p>
+                <h2>Accede a nuestro boletin</h2>
+                <p>Si queres enterarte de novedades sobre PIERRE, te invitamos a que te sumes a nuestro boletin semestral, donde publicamos toda informacion sobre ropa proxima a estrenarse</p>
                 <p><a class="btn btn-dark" href="#" role="button">Ver más&raquo;</a></p>
             </section><!-- /.col-lg-4 -->
             <section class="col-lg-4">
                 <img class="rounded-circle" src="{{asset('images/main/image-3.jpg')}}" alt="Generic placeholder image" width="140" height="140">
-                <h2>Titulo 3</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum neque culpa magni excepturi, hic distinctio aperiam at adipisci quisquam quod.</p>
-                <p><a class="btn btn-dark" href="#" role="button">Ver más&raquo;</a></p>
+                <h2>FAQs</h2>
+                <p>Si tenes alguna duda sobre PIERRE, fijate en nuestras FAQs, alli se encuentra toda informacion sobre donde nos encontramos y a que nos dedicamos dia a dia!</p>
+            <p><a class="btn btn-dark" href="{{route('faqs')}}" role="button">Ver más&raquo;</a></p>
             </section><!-- /.col-lg-4 -->
         </article><!-- /.row -->
     </div>
