@@ -51,7 +51,7 @@
 							@foreach (session()->get("user.cart") as $product)
 							<div class="col-md-4">
 								<section class="thumbnail">
-									<img style="width:200px;height:400px;" src="{{$product['image']}}">
+									<img style="width:200px;height:300px;" src="{{$product['image']}}">
 									<article class="caption">
 										<h3>
 											{{$product['name']}}
